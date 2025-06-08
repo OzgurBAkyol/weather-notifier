@@ -7,14 +7,14 @@ def run_weather_notification():
     weather_data = get_weather()
 
     if not weather_data:
-        print("❌ Tahmin alınamadı. E-posta gönderilmedi.")
+        print("❌ Hava Tahmini alınamadı. E-posta bu nedenle gönderilemedi.")
         return
 
     print("🧠 Mesaj oluşturuluyor...")
     message = build_message(weather_data)
 
     print("📬 E-posta gönderiliyor...")
-    send_email("Günlük Hava Durumu Tahmini", message)
+    send_email("Günlük Hava Durumu Tahmini Bu Şekilde : ", message)
     print("✅ İşlem tamamlandı.")
 
 if __name__ == "__main__":
